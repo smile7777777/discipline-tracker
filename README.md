@@ -1,33 +1,13 @@
-# 生活自律打卡 PWA
+# 生活自律打卡 PWA v3
 
-## 功能
-- 每日自動積分
-- Normal / Life Day / Survival 模式
-- 每週總分與等級
-- 連續打卡天數
-- 最近 14 天分數趨勢
-- 月曆熱力圖
-- localStorage 本機保存
-- JSON 匯出 / 匯入
-- PWA manifest + Service Worker
-- iPhone / Android 主畫面安裝
+新增 LeetCode、音樂、遊戲時間與室內運動。Normal Day 仍為預設模式。
 
-## 本機測試
-PWA 的 Service Worker 不能直接用 file:// 完整測試。
-在這個資料夾執行：
+## 舊資料保留
+新版仍使用 `disciplineTracker_v2` localStorage key，因此只要 GitHub Pages 網址沒有改變，舊日期紀錄會保留。舊版的 `exerciseMinutes` 也會自動當作「其他運動分鐘」讀取。
 
-python3 -m http.server 8000
+建議更新前先在舊版「設定 → 匯出備份」保存一份 JSON。
 
-然後瀏覽器開啟：
-http://localhost:8000
+## 更新 GitHub Pages
+把這個資料夾中的 `index.html`、`manifest.webmanifest`、`sw.js`、`icon-192.png`、`icon-512.png` 上傳並覆蓋 repository 根目錄的同名檔案即可。
 
-## 放到 GitHub Pages
-1. 建立一個 GitHub repository。
-2. 把這個資料夾內所有檔案放到 repository 根目錄。
-3. GitHub → Settings → Pages。
-4. Source 選 Deploy from a branch。
-5. Branch 選 main / root。
-6. 等 Pages 網址出現後，用手機 Safari / Chrome 打開。
-7. iPhone：分享 → 加入主畫面。
-
-資料仍然只保存在該裝置瀏覽器的 localStorage，因此換裝置前請先「匯出備份」。
+若更新後仍看到舊畫面，等 GitHub Pages 部署完成後完全關閉主畫面 App / Safari，再重新開啟一次。
