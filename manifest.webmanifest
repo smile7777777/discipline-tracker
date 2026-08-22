@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#f7f4ee",
   "theme_color": "#f6f2ea",
-  "description": "研究、生活、休息的每日打卡與每週積分 App",
+  "description": "生活平衡、研究、Compiler LeetCode、運動與休息追蹤",
   "icons": [
     {
       "src": "icon-192.png",
